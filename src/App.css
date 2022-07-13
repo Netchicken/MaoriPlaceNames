@@ -97,7 +97,8 @@ body {
   border-radius: 18px;
   width: auto;
   font-size: 1em;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Roboto", sans-serif;
   /* color: #1b1c1f; */
   /* background-color: #eff1e6a1; */
   color: rgb(57, 50, 3);
@@ -168,25 +169,29 @@ body {
 
 .appheadercontainer {
   /* background-color: #7CA1B4; */
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  /* text-align: left; */
   font-size: 1em;
-  font-weight: bold;
+  font-weight: bolder;
   color: #1b1c1f;
 }
 .appheadercitytext {
   /* background-color: #7CA1B4; */
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   font-size: 0.8em;
   /* font-weight: bold; */
   color: #1b1c1f;
 }
 
 .appheadermeaningtext {
+  text-align: center;
   font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
   background: -webkit-linear-gradient(#eee, rgb(119, 22, 183));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
