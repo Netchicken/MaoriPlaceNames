@@ -11,7 +11,7 @@ const Section = ({ props }) => {
         <div className='col'>
           <div className='appheadercontainer'>
             The Meaning of the place in English is
-            <span className='Meaning'>
+            <span className='appheadermeaningtext'>
               {props.Meaning ? props.Meaning : ""}
             </span>
           </div>
