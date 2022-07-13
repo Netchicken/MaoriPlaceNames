@@ -4,18 +4,18 @@ const Section = ({ props }) => {
       <div className='row'>
         <div className='col'>
           <div className='appheadercitytext'>
-            The city is {props.CapitalName ? props.CapitalName : ""} (only
+            The Place Name is {props.Placename ? props.Placename : ""} (only
             showing for debugging)
           </div>
         </div>
         <div className='col'>
           <div className='appheadercontainer'>
-            The Country is {props.CountryName ? props.CountryName : ""}
+            The Meaning is {props.Meaning ? props.Meaning : ""}
           </div>
         </div>
         <div className='col'>
           <div className='appheadercontainer'>
-            The Continent is {props.ContinentName ? props.ContinentName : ""}
+            The Components are {props.Components ? props.Components : ""}
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
-import { countryData, createCities } from "../Assets/cities"; //datalist of countries
+//import { countryData, createCities } from "../Assets/cities"; //datalist of countries
 import {
   maoriPlaceNamesData,
   createMaoriPlacenames,
@@ -13,14 +13,7 @@ import Swal from "sweetalert2"; //makes cool popups.
 
 const CityGame = () => {
   const [allData, setAllData] = useState(maoriPlaceNamesData); //all the data of the countries
-  // const [gameData, setGameData] = useState({
-  //for the game being currently played
-  // CountryName: "Start",
-  // CapitalName: "Start",
-  // CapitalLatitude: 0,
-  // CapitalLongitude: 0,
-  // ContinentName: "Start",
-  // }); //holds the selected country details
+  
 
   const [gameData, setGameData] = useState({
     //for the game being currently played
@@ -158,7 +151,7 @@ const CityGame = () => {
             className='buttonSubmit btn btn-default'
             onClick={onClickHandlerNewGame}
           >
-            Choose a random Country
+            Choose a random Place
           </button>
         </div>
         <div className='col'>
