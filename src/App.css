@@ -98,8 +98,10 @@ body {
   width: auto;
   font-size: 1em;
   font-weight: bold;
-  color: #1b1c1f;
-  background-color: #eff1e6a1;
+  /* color: #1b1c1f; */
+  /* background-color: #eff1e6a1; */
+  color: rgb(57, 50, 3);
+  background-color: #ffffff;
   padding: 5px;
   margin-right: 5px;
   margin-top: 15px;
