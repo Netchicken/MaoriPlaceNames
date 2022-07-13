@@ -10,15 +10,14 @@ const Section = ({ props }) => {
         </div>
         <div className='col'>
           <div className='appheadercontainer'>
-            The Meaning of the place in English is
-            <span className='appheadermeaningtext'>
+              <span className='appheadermeaningtext'>
               {props.Meaning ? props.Meaning : ""}
             </span>
           </div>
         </div>
         <div className='col'>
           <div className='appheadercontainer'>
-            The Components are {props.Components ? props.Components : ""}
+            Hint: The Components are {props.Components ? props.Components : ""}
           </div>
         </div>
       </div>

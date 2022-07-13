@@ -67,7 +67,10 @@ const CityGame = () => {
       if (selectedCity === gameData.Placename) {
         alertItemName("Yes! You win! The place is " + selectedCity);
         // pass in the citiescorrect state, spread it,  and pass both to setCitiesCorrect
-        setCitiesCorrect((citiesCorrect) => [...citiesCorrect, selectedCity]);
+        setCitiesCorrect((citiesCorrect) => [
+          ...citiesCorrect,
+          selectedCity + " is " + gameData.Components,
+        ]);
       } else {
         alertItemName(
           "Nope, Sorry. The place is " +
@@ -158,7 +161,7 @@ const CityGame = () => {
           <div className='headingoutome'>
             {toggleTextIsHidden === "false"
               ? "You have chosen " + selectedCity
-              : "Select a Place Name"}
+              : "The Meaning of the place in English is " + gameData.Meaning}
           </div>
 
           <Select
