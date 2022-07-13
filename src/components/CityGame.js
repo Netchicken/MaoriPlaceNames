@@ -147,7 +147,7 @@ const CityGame = () => {
   return (
     <div className='container-fluid'>
       <div className='row'>
-        <div className='col'>
+        <div className='col-sm'>
           <button
             className='buttonSubmit btn btn-default'
             onClick={onClickHandlerNewGame}
@@ -155,7 +155,7 @@ const CityGame = () => {
             Choose a random Place
           </button>
         </div>
-        <div className='col'>
+        <div className='col-sm'>
           {/* We need to show and hide the text below */}
 
           <div className='headingoutome'>
@@ -171,7 +171,7 @@ const CityGame = () => {
             onChange={handleCityChange}
           />
         </div>
-        <div className='col'>
+        <div className='col-sm'>
           <button
             className='buttonSubmit btn btn-default'
             onClick={onClickSubmit}
@@ -184,7 +184,7 @@ const CityGame = () => {
           {/* <div className='headingoutome'>Results</div> */}
           <div className='row'>
             <div className='resultcontainer'>
-              <div className='col'>
+              <div className='col-sm'>
                 {/* <div className='headingoutome'>Correct Cities</div> */}
                 {citiesCorrect.map((item) => {
                   return (
@@ -194,9 +194,7 @@ const CityGame = () => {
                   );
                 })}
               </div>
-              <div className='col'>
-                {/* <div className='headingoutome'>Wrong Countries</div> */}
-
+              <div className='col-sm'>
                 {citiesWrong.map((item) => {
                   return (
                     <div key={item} className='cardBody'>
