@@ -15,7 +15,7 @@ const Section = ({ props }) => {
         </div>
         <div className='col'>
           <div className='appheadercontainer'>
-            The Components are {props.Components ? props.Components : ""}
+            The Components are <span className=''>{props.Components ? props.Components : ""}</span> 
           </div>
         </div>
       </div>

@@ -13,7 +13,6 @@ import Swal from "sweetalert2"; //makes cool popups.
 
 const CityGame = () => {
   const [allData, setAllData] = useState(maoriPlaceNamesData); //all the data of the countries
-  
 
   const [gameData, setGameData] = useState({
     //for the game being currently played
@@ -59,23 +58,23 @@ const CityGame = () => {
     console.log("onClickHandlerNewGame Selected Country Data", allData[number]);
   };
   const CheckForWinnerLoser = () => {
-    console.log(
-      "CheckForWinnerLoser gameData.CapitalName",
-      gameData.Placename
-    );
+    console.log("CheckForWinnerLoser gameData.CapitalName", gameData.Placename);
     setToggleTextIsHidden("true"); //hide the text
 
     console.log("CheckForWinnerLoser selectedCity", selectedCity);
 
     if (selectedCity != null && gameData.Placename !== null) {
       if (selectedCity === gameData.Placename) {
-        alertItemName("Yes! You win! The city is " + selectedCity);
+        alertItemName("Yes! You win! The place is " + selectedCity);
         // pass in the citiescorrect state, spread it,  and pass both to setCitiesCorrect
         setCitiesCorrect((citiesCorrect) => [...citiesCorrect, selectedCity]);
       } else {
         alertItemName(
-          "Nope, Sorry. The city is " +
-            gameData.Meaning + " " + gameData.Components + " not " +
+          "Nope, Sorry. The place is " +
+            gameData.Meaning +
+            " " +
+            gameData.Components +
+            " not " +
             selectedCity +
             ", good guess though"
         );
@@ -115,7 +114,6 @@ const CityGame = () => {
         Placename: selecteditem.Placename,
         Components: selecteditem.Components,
         Meaning: selecteditem.Meaning,
-        
       });
     });
   };
@@ -160,7 +158,7 @@ const CityGame = () => {
           <div className='headingoutome'>
             {toggleTextIsHidden === "false"
               ? "You have chosen " + selectedCity
-              : "Select a City"}
+              : "Select a Place Name"}
           </div>
 
           <Select
