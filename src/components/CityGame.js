@@ -134,7 +134,7 @@ const CityGame = () => {
           <div className='headingoutome'>
             {toggleTextIsHidden === "false"
               ? "You have chosen " + selectedCity
-              : "The Meaning of the place in English is " + gameData.Meaning}
+              : "The place is called  " + gameData.Meaning}
           </div>
 
           <Select

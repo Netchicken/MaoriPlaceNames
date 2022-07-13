@@ -5,7 +5,7 @@ const AppHeader = (props) => {
   return (
     <div className='container-fluid  justify-content-md-center App-header '>
       <h1 className='title' align='center'>
-        Test your Maori Place Name Knowledge
+        The Māori place name quiz
       </h1>
     </div>
   );

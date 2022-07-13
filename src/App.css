@@ -3,8 +3,7 @@
   flex-direction: row;
   align-items: center;
 }
-.bodyContainer {
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -63,41 +62,22 @@ body {
   color: #f0f6f5;
 }
 
-.button {
-  width: 100px;
-  height: 35px;
-  margin: 15px;
-  /* font-family: "Roboto", sans-serif; */
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  /* color: #000; */
-  /* background-color: #fff; */
-  border: #000;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-
 .buttonSubmit {
-  width: 100%;
+  width: 80%;
   height: 80%;
-  /* font-family: "Roboto", sans-serif; */
-  font-size: 16px;
-  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  /* text-transform: uppercase; */
   /* letter-spacing: 2.5px; */
   font-weight: 500;
-  /* color: #000; */
-  /* background-color: #fff; */
-  border: #000;
+  color: rgb(57, 50, 3);
+  background-color: #ffffff;
+  border: thin double #32a1ce;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
+  /* cursor: pointer; */
+  /* outline: none; */
 
   padding: 10px;
   margin: 5px;
@@ -119,7 +99,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: #1b1c1f;
-  background-color: #edf1e6a1;
+  background-color: #eff1e6a1;
   padding: 5px;
   margin-right: 15px;
   margin-top: 15px;
@@ -136,7 +116,7 @@ body {
 
 .joketext {
   margin-top: 20px;
-  font: bold 30px arial, sans-serif;
+  font: bold 20px arial, sans-serif;
   color: rgb(230, 220, 220);
   text-shadow: 4px 3px 0px #333, 3px 0px 0px #333, 2px 0px 0px #333,
     1px 0px 0px #333, 3px 0px 15px rgba(0, 0, 0, 0.8), 0px 4px 0px #444,
