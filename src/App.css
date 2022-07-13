@@ -96,7 +96,7 @@ body {
 .cardBody {
   border-radius: 18px;
   width: auto;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
   color: #1b1c1f;
   background-color: #eff1e6a1;
@@ -147,7 +147,7 @@ body {
   grid-template-columns: 1fr 1fr;
   /* flex-direction: row; */
   text-align: center;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: bold;
   color: #1b1c1f;
 }
