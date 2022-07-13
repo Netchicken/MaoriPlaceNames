@@ -63,6 +63,14 @@ body {
   color: #09d3ac;
 }
 
+.Meaning{
+ font-size: 20px;
+  background: -webkit-linear-gradient(#eee, rgb(119, 22, 183));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .button {
   width: 100px;
   height: 35px;
