@@ -1,4 +1,3 @@
-
 //we have to remap the city data into an object of value city because the stupid select can't read a simple list of cities
 
 //city data. the Select  needs to be in the array object of
@@ -11,7 +10,7 @@ export function createMaoriPlacenames() {
     label: item.Placename,
   }));
   //https://stackoverflow.com/questions/43572436/sort-an-array-of-objects-in-react-and-render-them
-  getSelectDataList.sort((a, b) => (a.label > b.label ? 1 : -1));
+  //getSelectDataList.sort((a, b) => (a.label > b.label ? 1 : -1));
 
   console.log(
     "createMaoriPlacenames in maoriPlacenames.js selectData ",
@@ -21,7 +20,6 @@ export function createMaoriPlacenames() {
 
   // const data = allData.flatMap((item) => item.CapitalName).sort();
 }
-
 
 export const maoriPlaceNamesData = [
   {
