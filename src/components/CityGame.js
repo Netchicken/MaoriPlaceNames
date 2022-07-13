@@ -5,7 +5,7 @@ import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
 import Results from "./ResultsPage"; //shows the results
-import { GetRandomNumber } from "../Operations/AllOperations";
+import { GetRandomNumber, alertItemName } from "../Operations/AllOperations";
 //
 //import { countryData, createCities } from "../Assets/cities"; //datalist of countries
 import {
@@ -92,19 +92,7 @@ const CityGame = () => {
   //   ToastAndroid.showWithGravity(msg, ToastAndroid.LONG, ToastAndroid.CENTER);
   // };
 
-  //getting the random number to select the current country data
-  // const GetRandomNUmber = () => {
-  //   var randomNumber = getRandomNumberBetween(0, allData.length - 1);
-  //   setNumber(randomNumber);
-  // };
-
-  // const getRandomNumberBetween = (min, max) => {
-  //   // console.log("getRandomNumberBetween allData.length", max);
-  //   return Math.floor(Math.random() * (max - min + 1) + min);
-  // };
-
   const LoadGamedata = () => {
-    // GetRandomNUmber();
     let length = allData.length;
     let Rand = GetRandomNumber(length);
     setNumber(Rand);
@@ -122,20 +110,7 @@ const CityGame = () => {
   const onClickSubmit = () => {
     CheckForWinnerLoser();
   };
-  const alertItemName = (item) => {
-    Swal.fire({
-      title: "Did you guess correctly?",
-      text: item,
-      icon: "question",
-      confirmButtonText: "Cool",
-      toast: "OK",
-      position: "top",
-      timer: "7000",
-      showCloseButton: "false",
-    });
 
-    // alert(item);
-  };
   const handleCityChange = (e) => {
     console.log(" handleChange city Selected!!", e.value);
     setSelectedCity(e.value);
