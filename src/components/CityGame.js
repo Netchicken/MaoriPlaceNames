@@ -5,6 +5,8 @@ import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
 import Results from "./ResultsPage"; //shows the results
+import { GetRandomNumber } from "../Operations/AllOperations";
+//
 //import { countryData, createCities } from "../Assets/cities"; //datalist of countries
 import {
   maoriPlaceNamesData,
@@ -44,12 +46,6 @@ const CityGame = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     fetchData();
   }, []);
-
-  // this runs whenever cityData changes
-  // useEffect(() => {
-  //   setSelectCityData(createCities);
-  //   // console.log("useEffect allcities ", selectCityData);
-  // }, [createCities]);
 
   const onClickHandlerNewGame = () => {
     console.log("onClickHandlerNewGame", "triggered");
@@ -97,20 +93,21 @@ const CityGame = () => {
   // };
 
   //getting the random number to select the current country data
-  const GetRandomNUmber = () => {
-    var randomNumber = getRandomNumberBetween(0, allData.length - 1);
-    setNumber(randomNumber);
-  };
+  // const GetRandomNUmber = () => {
+  //   var randomNumber = getRandomNumberBetween(0, allData.length - 1);
+  //   setNumber(randomNumber);
+  // };
 
-  const getRandomNumberBetween = (min, max) => {
-    console.log("getRandomNumberBetween allData.length", max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
+  // const getRandomNumberBetween = (min, max) => {
+  //   // console.log("getRandomNumberBetween allData.length", max);
+  //   return Math.floor(Math.random() * (max - min + 1) + min);
+  // };
 
   const LoadGamedata = () => {
-    GetRandomNUmber();
-    // var Length =  allData.length;
-    // setNumber({ GetRandomNumber(length = Length)});
+    // GetRandomNUmber();
+    let length = allData.length;
+    let Rand = GetRandomNumber(length);
+    setNumber(Rand);
 
     allData.map((item, id) => {
       var selecteditem = allData[number]; //get the data at that point
