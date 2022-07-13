@@ -5,8 +5,8 @@ const Results = (props) => {
       <div className='row'>
         <div className='resultcontainer'>
           <div className='col-sm'>
-            {/* <div className='headingoutome'>Correct Cities</div> */}
-            {props.citiesCorrect.map((item) => {
+            <div className='appheadermeaningtext'>Correct</div>
+            {props.citiesCorrect.reverse().map((item) => {
               return (
                 <div className='cardBody' key={item}>
                   {item}
@@ -15,7 +15,8 @@ const Results = (props) => {
             })}
           </div>
           <div className='col-sm'>
-            {props.citiesWrong.map((item) => {
+            <div className='appheadermeaningtext'>Incorrect</div>
+            {props.citiesWrong.reverse().map((item) => {
               return (
                 <div key={item} className='cardBody'>
                   {item}

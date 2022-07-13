@@ -25,8 +25,8 @@ const CityGame = () => {
   });
   const [selectedCity, setSelectedCity] = useState(null); //selected city
   const [number, setNumber] = useState(0); //random number
-  const [citiesCorrect, setCitiesCorrect] = useState(["Correct"]);
-  const [citiesWrong, setCitiesWrong] = useState(["Incorrect"]);
+  const [citiesCorrect, setCitiesCorrect] = useState([]);
+  const [citiesWrong, setCitiesWrong] = useState([]);
   const [toggleTextIsHidden, setToggleTextIsHidden] = useState("true");
   const [selectCityData, setSelectCityData] = useState(createMaoriPlacenames);
 
