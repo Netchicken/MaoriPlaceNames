@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
+import Results from "./ResultsPage"; //shows the results
 //import { countryData, createCities } from "../Assets/cities"; //datalist of countries
 import {
   maoriPlaceNamesData,
@@ -180,32 +181,7 @@ const CityGame = () => {
           </button>
         </div>
         <Section className='sectionTitle' props={gameData} />
-        <div className='container'>
-          {/* <div className='headingoutome'>Results</div> */}
-          <div className='row'>
-            <div className='resultcontainer'>
-              <div className='col-sm'>
-                {/* <div className='headingoutome'>Correct Cities</div> */}
-                {citiesCorrect.map((item) => {
-                  return (
-                    <div className='cardBody' key={item}>
-                      {item}
-                    </div>
-                  );
-                })}
-              </div>
-              <div className='col-sm'>
-                {citiesWrong.map((item) => {
-                  return (
-                    <div key={item} className='cardBody'>
-                      {item}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
+        <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
       </div>
     </div>
   );
