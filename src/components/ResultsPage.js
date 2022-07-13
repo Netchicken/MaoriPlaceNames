@@ -1,4 +1,4 @@
-const Results = ({ props }) => {
+const Results = (props) => {
   return (
     <div className='container'>
       {/* <div className='headingoutome'>Results</div> */}
