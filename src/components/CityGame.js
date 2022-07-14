@@ -132,7 +132,7 @@ const CityGame = () => {
   };
 
   const newplaceholder = () => {
-    return "Select a place " + selectedCity;
+    return selectedCity ? "Select a place " + selectedCity : "Select a place";
   };
 
   return (
@@ -162,7 +162,7 @@ const CityGame = () => {
             className='selectDropDownStyle'
             value={selectedCity}
             onChange={handleCityChange}
-            placeholder='Select the place'
+            placeholder={newplaceholder()} //'Select the place'
             controlShouldRenderValue={true}
           />
         </div>
