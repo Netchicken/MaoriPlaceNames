@@ -4,7 +4,7 @@ const Footer = ({ props }) => {
       <div className='row'>
         <div className='col-sm'>
           <div className='appheadercitytext'>
-            Hint: {props.Components ? props.Components : ""}
+            <b> Hint: {props.Components ? props.Components : ""}</b>
           </div>
         </div>
         <div className='col-sm '>
