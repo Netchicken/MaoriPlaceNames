@@ -177,20 +177,20 @@ const CityGame = () => {
 
         <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
       </div>
-      <div className='fixed-bottom '>
+      <div className='fixed-bottom border border-success'>
         <div className='row'>
           <div className='col-sm'>
             <a
               className='appheadercitytext'
               href='https://nzhistory.govt.nz/culture/maori-language-week/1000-maori-place-names'
             >
-              1000 Maori Place Names Source{" "}
+              1000 Maori Place Names Source
             </a>
           </div>
           <div className='col-sm '>
             <div className='appheadercitytext'>
-              The Place Name is {gameData.Placename ? gameData.Placename : ""}{" "}
-              (only showing for debugging)
+              The Place is {gameData.Placename ? gameData.Placename : ""} (only
+              showing for debugging)
             </div>
           </div>
           <div className='col-sm'>
