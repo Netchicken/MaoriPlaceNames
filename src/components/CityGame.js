@@ -141,7 +141,7 @@ const CityGame = () => {
     <div className='container-fluid'>
       <div className='row'>
         <Section className='sectionTitle' props={gameData} />
-        <div className='col-sm'>
+        <div className='col-sm d-flex justify-content-center'>
           <button
             className='buttonSubmit btn btn-default'
             onClick={onClickHandlerNewGame}
