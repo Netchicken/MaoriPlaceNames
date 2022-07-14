@@ -150,11 +150,11 @@ const CityGame = () => {
         <div className='col-sm'>
           {/* We need to show and hide the text below */}
 
-          <div className='headingoutome'>
+          {/* <div className='headingoutome'>
             {toggleTextIsHidden === "false"
               ? "You have chosen " + selectedCity
               : "The place is called  " + gameData.Meaning}
-          </div>
+          </div> */}
 
           <Select
             styles={selectCustomStyles}
@@ -162,7 +162,7 @@ const CityGame = () => {
             className='selectDropDownStyle'
             value={selectedCity}
             onChange={handleCityChange}
-            placeholder='Select a place'
+            placeholder='Select the place'
             controlShouldRenderValue={true}
           />
         </div>
@@ -176,6 +176,29 @@ const CityGame = () => {
         </div> */}
 
         <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
+      </div>
+      <div className='fixed-bottom '>
+        <div className='row'>
+          <div className='col-sm'>
+            <a
+              className='appheadercitytext'
+              href='https://nzhistory.govt.nz/culture/maori-language-week/1000-maori-place-names'
+            >
+              1000 Maori Place Names Source{" "}
+            </a>
+          </div>
+          <div className='col-sm '>
+            <div className='appheadercitytext'>
+              The Place Name is {gameData.Placename ? gameData.Placename : ""}{" "}
+              (only showing for debugging)
+            </div>
+          </div>
+          <div className='col-sm'>
+            <div className='appheadercitytext'>
+              Hint: {gameData.Components ? gameData.Components : ""}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
