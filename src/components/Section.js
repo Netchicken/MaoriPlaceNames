@@ -9,11 +9,11 @@ const Section = ({ props }) => {
           </div>
         </div>
         <div className='col-sm'> */}
-        <div className='appheadercontainer'>
-          <span className='appheadermeaningtext'>
-            {props.Meaning ? props.Meaning : ""}
-          </span>
+        {/* <div className='appheadercontainer'> */}
+        <div className='appheadermeaningtext'>
+          {props.Meaning ? props.Meaning : ""}
         </div>
+        {/* </div> */}
         {/* </div>
         <div className='col-sm'>
           <div className='appheadercontainer'>

@@ -112,7 +112,7 @@ body {
 }
 
 .cardBody:hover {
-  background-color: #edf1e6a1;
+  background-color: #ffffff;
   box-shadow: 3px 3px red, -1em 0 0.4em olive;
   transform: translateY(-7px);
 }

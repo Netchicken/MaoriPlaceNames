@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
+import Footer from "./Footer"; //shows country info
+
 import Results from "./ResultsPage"; //shows the results
 import { GetRandomNumber, alertItemName } from "../Operations/AllOperations";
 //
@@ -177,29 +179,8 @@ const CityGame = () => {
 
         <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
       </div>
-      <div className='fixed-bottom border border-success'>
-        <div className='row'>
-          <div className='col-sm'>
-            <div className='appheadercitytext'>
-              Hint: {gameData.Components ? gameData.Components : ""}
-            </div>
-          </div>
-          <div className='col-sm '>
-            <div className='appheadercitytext'>
-              The Place is {gameData.Placename ? gameData.Placename : ""} (only
-              showing for debugging)
-            </div>
-          </div>
-          <div className='col-sm'>
-            <a
-              className='appheadercitytext'
-              href='https://nzhistory.govt.nz/culture/maori-language-week/1000-maori-place-names'
-            >
-              1000 Maori Place Names
-            </a>
-          </div>
-        </div>
-      </div>
+
+      <Footer props={gameData} />
     </div>
   );
   // }
