@@ -160,12 +160,13 @@ body {
   color: #1b1c1f;
   text-align: center;
 }
-.optioncity {
+.selectDropDownStyle {
   font-size: 0.9em;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #1b1c1f;
   text-align: center;
+  padding: 0;
 }
 
 .appheadercontainer {

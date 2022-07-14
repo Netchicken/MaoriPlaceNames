@@ -116,6 +116,20 @@ const CityGame = () => {
     setSelectedCity(e.value);
     setToggleTextIsHidden("false"); //unhide the text
   };
+  //for the dropdown select https://blog.logrocket.com/getting-started-with-react-select/
+  const selectCustomStyles = {
+    option: (provided, state) => ({
+      ...provided,
+      borderBottom: "1px solid green",
+      color: state.isSelected ? "yellow" : "black",
+      backgroundColor: state.isSelected ? "green" : "white",
+      padding: "0px",
+    }),
+  };
+
+  const newplaceholder = () => {
+    return "Select a place " + selectedCity;
+  };
 
   return (
     <div className='container-fluid'>
@@ -138,10 +152,13 @@ const CityGame = () => {
           </div>
 
           <Select
+            styles={selectCustomStyles}
             options={selectCityData}
-            className='optioncity'
+            className='selectDropDownStyle'
             value={selectedCity}
             onChange={handleCityChange}
+            placeholder='Select a place'
+            controlShouldRenderValue={true}
           />
         </div>
         <div className='col-sm'>
