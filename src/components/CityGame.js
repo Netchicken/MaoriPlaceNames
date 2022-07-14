@@ -180,12 +180,9 @@ const CityGame = () => {
       <div className='fixed-bottom border border-success'>
         <div className='row'>
           <div className='col-sm'>
-            <a
-              className='appheadercitytext'
-              href='https://nzhistory.govt.nz/culture/maori-language-week/1000-maori-place-names'
-            >
-              1000 Maori Place Names Source
-            </a>
+            <div className='appheadercitytext'>
+              Hint: {gameData.Components ? gameData.Components : ""}
+            </div>
           </div>
           <div className='col-sm '>
             <div className='appheadercitytext'>
@@ -194,9 +191,12 @@ const CityGame = () => {
             </div>
           </div>
           <div className='col-sm'>
-            <div className='appheadercitytext'>
-              Hint: {gameData.Components ? gameData.Components : ""}
-            </div>
+            <a
+              className='appheadercitytext'
+              href='https://nzhistory.govt.nz/culture/maori-language-week/1000-maori-place-names'
+            >
+              1000 Maori Place Names
+            </a>
           </div>
         </div>
       </div>
