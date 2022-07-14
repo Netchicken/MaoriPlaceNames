@@ -73,13 +73,7 @@ const CityGame = () => {
         ]);
       } else {
         alertItemName(
-          "Nope, Sorry. The place is " +
-            gameData.Meaning +
-            " " +
-            gameData.Components +
-            " not " +
-            selectedCity +
-            ", good guess though"
+          "Sorry. The place is not " + selectedCity + ". Try again"
         );
         // pass in the citiesWrong state, spread it,  and pass both to setCitiesWrong
         setCitiesWrong((citiesWrong) => [
