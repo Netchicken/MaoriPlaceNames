@@ -17,7 +17,7 @@ export function alertItemName(item) {
     confirmButtonText: "Cool",
     toast: "OK",
     position: "top",
-    timer: "7000",
+    timer: "3000",
     showCloseButton: "false",
   });
 }

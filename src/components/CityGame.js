@@ -23,7 +23,8 @@ const CityGame = () => {
     Components: "Start",
     Meaning: "Start",
   });
-  const [selectedCity, setSelectedCity] = useState(null); //selected city
+  let selectedCity;
+  //  const [selectedCity, setSelectedCity] = useState(null); //selected city
   const [number, setNumber] = useState(0); //random number
   const [citiesCorrect, setCitiesCorrect] = useState([]);
   const [citiesWrong, setCitiesWrong] = useState([]);
@@ -113,8 +114,11 @@ const CityGame = () => {
 
   const handleCityChange = (e) => {
     console.log(" handleChange city Selected!!", e.value);
-    setSelectedCity(e.value);
+    // setSelectedCity(e.value);
+    selectedCity = e.value;
     setToggleTextIsHidden("false"); //unhide the text
+
+    CheckForWinnerLoser();
   };
   //for the dropdown select https://blog.logrocket.com/getting-started-with-react-select/
   const selectCustomStyles = {
@@ -134,6 +138,7 @@ const CityGame = () => {
   return (
     <div className='container-fluid'>
       <div className='row'>
+        <Section className='sectionTitle' props={gameData} />
         <div className='col-sm'>
           <button
             className='buttonSubmit btn btn-default'
@@ -161,15 +166,15 @@ const CityGame = () => {
             controlShouldRenderValue={true}
           />
         </div>
-        <div className='col-sm'>
+        {/* <div className='col-sm'>
           <button
             className='buttonSubmit btn btn-default'
             onClick={onClickSubmit}
           >
             Submit your answer
           </button>
-        </div>
-        <Section className='sectionTitle' props={gameData} />
+        </div> */}
+
         <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
       </div>
     </div>
