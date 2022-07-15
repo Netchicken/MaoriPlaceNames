@@ -9,7 +9,7 @@ const Results = (props) => {
             {props.citiesCorrect.reverse().map((item) => {
               return (
                 <div className='cardBody' key={item}>
-                  {item}
+                  {item} 
                 </div>
               );
             })}

@@ -14,7 +14,7 @@ import {
   maoriPlaceNamesData,
   createMaoriPlacenames,
 } from "../Assets/maoriPlaceNames"; //datalist of MaoriPlacenames
-import Swal from "sweetalert2"; //makes cool popups.
+//import Swal from "sweetalert2"; //makes cool popups.
 
 const CityGame = () => {
   const [allData, setAllData] = useState(maoriPlaceNamesData); //all the data of the countries
@@ -30,7 +30,7 @@ const CityGame = () => {
   const [number, setNumber] = useState(0); //random number
   const [citiesCorrect, setCitiesCorrect] = useState([]);
   const [citiesWrong, setCitiesWrong] = useState([]);
-  const [toggleTextIsHidden, setToggleTextIsHidden] = useState("true");
+  //const [toggleTextIsHidden, setToggleTextIsHidden] = useState("true");
   const [selectCityData, setSelectCityData] = useState(createMaoriPlacenames);
 
   //this run only at the initial stage, AFTER the dom has loaded ,[] at the end makes it run once
@@ -57,9 +57,10 @@ const CityGame = () => {
     console.log("onClickHandlerNewGame Random number", number);
     console.log("onClickHandlerNewGame Selected Country Data", allData[number]);
   };
+
   const CheckForWinnerLoser = () => {
     console.log("CheckForWinnerLoser gameData.CapitalName", gameData.Placename);
-    setToggleTextIsHidden("true"); //hide the text
+    //setToggleTextIsHidden("true"); //hide the text
 
     console.log("CheckForWinnerLoser selectedCity", selectedCity);
 
@@ -67,9 +68,18 @@ const CityGame = () => {
       if (selectedCity === gameData.Placename) {
         alertItemName("Yes! You win! The place is " + selectedCity);
         // pass in the citiescorrect state, spread it,  and pass both to setCitiesCorrect
+
+        let url = (
+          <a
+            href={"https://www.google.com/search?q=new+zealand+" + selectedCity}
+          >
+            Visit
+          </a>
+        );
+
         setCitiesCorrect((citiesCorrect) => [
           ...citiesCorrect,
-          selectedCity + " is " + gameData.Components,
+           selectedCity  + " is " + gameData.Components ,
         ]);
       } else {
         alertItemName(
@@ -104,15 +114,15 @@ const CityGame = () => {
     });
   };
 
-  const onClickSubmit = () => {
-    CheckForWinnerLoser();
-  };
+  // const onClickSubmit = () => {
+  //   CheckForWinnerLoser();
+  // };
 
   const handleCityChange = (e) => {
     console.log(" handleChange city Selected!!", e.value);
     // setSelectedCity(e.value);
     selectedCity = e.value;
-    setToggleTextIsHidden("false"); //unhide the text
+    //setToggleTextIsHidden("false"); //unhide the text
 
     CheckForWinnerLoser();
   };

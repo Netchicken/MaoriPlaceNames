@@ -9,7 +9,16 @@ const Footer = ({ props }) => {
         </div>
         <div className='col-sm '>
           <div className='appheadercitytext'>
-            The Place is {props.Placename ? props.Placename : ""} (debugging)
+            <a
+              href={
+                "https://www.google.com/search?q=new+zealand+map+" +
+                props.Placename
+              }
+              target='_blank'
+            >
+              Google {props.Placename ? props.Placename : "No place"}{" "}
+              (debugging)
+            </a>
           </div>
         </div>
         <div className='col-sm'>
