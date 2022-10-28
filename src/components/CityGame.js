@@ -1,6 +1,6 @@
 import "../App.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Select from "react-select"; //for my select dropdown
 import "bootstrap/dist/css/bootstrap.min.css"; //leatest v5
 import Section from "./Section"; //shows country info
@@ -10,23 +10,19 @@ import Results from "./ResultsPage"; //shows the results
 import { GetRandomNumber, alertItemName } from "../Operations/AllOperations";
 //
 //import { countryData, createCities } from "../Assets/cities"; //datalist of countries
-import {
-  maoriPlaceNamesData,
-  createMaoriPlacenames,
-} from "../Assets/maoriPlaceNames"; //datalist of MaoriPlacenames
-//import Swal from "sweetalert2"; //makes cool popups.
+import {quiz} from "../Assets/quiz";
+import {  maoriPlaceNamesData,  createMaoriPlacenames,} from "../Assets/maoriPlaceNames"; //datalist of MaoriPlacenames
 
 const CityGame = () => {
-  const [allData, setAllData] = useState(maoriPlaceNamesData); //all the data of the countries
+  const [allData, setAllData] = useState(quiz); //all the data of the countries
 
   const [gameData, setGameData] = useState({
     //for the game being currently played
-    Placename: "Start",
-    Components: "Start",
-    Meaning: "Start",
+    Q: "Start",
+    A: "Start",
   });
   let selectedCity;
-  //  const [selectedCity, setSelectedCity] = useState(null); //selected city
+  
   const [number, setNumber] = useState(0); //random number
   const [citiesCorrect, setCitiesCorrect] = useState([]);
   const [citiesWrong, setCitiesWrong] = useState([]);
@@ -35,15 +31,10 @@ const CityGame = () => {
 
   //this run only at the initial stage, AFTER the dom has loaded ,[] at the end makes it run once
   useEffect(() => {
-    //https://javascript.plainenglish.io/what-is-the-equivalent-of-the-componentdidmount-method-in-a-react-function-hooks-component-703df5aed7f6
-    //https://dmitripavlutin.com/react-useeffect-explanation/
-    //https://daveceddia.com/useeffect-hook-examples/
-
     const fetchData = () => {
-      setAllData(maoriPlaceNamesData);
+      setAllData(quiz);
       setSelectCityData(createMaoriPlacenames);
-      console.log("useEffect allData ", allData);
-      console.log("useEffect selectCityData ", selectCityData);
+      console.log("useEffect allData ", quiz);
       LoadGamedata();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,7 +70,7 @@ const CityGame = () => {
 
         setCitiesCorrect((citiesCorrect) => [
           ...citiesCorrect,
-           selectedCity  + " is " + gameData.Components ,
+          selectedCity + " is " + gameData.Components,
         ]);
       } else {
         alertItemName(
@@ -107,24 +98,16 @@ const CityGame = () => {
     allData.map((item, id) => {
       var selecteditem = allData[number]; //get the data at that point
       setGameData({
-        Placename: selecteditem.Placename,
-        Components: selecteditem.Components,
-        Meaning: selecteditem.Meaning,
+        Q: selecteditem.Q,
+        A: selecteditem.A
       });
     });
   };
 
-  // const onClickSubmit = () => {
-  //   CheckForWinnerLoser();
-  // };
-
   const handleCityChange = (e) => {
     console.log(" handleChange city Selected!!", e.value);
-    // setSelectedCity(e.value);
-    selectedCity = e.value;
-    //setToggleTextIsHidden("false"); //unhide the text
-
-    CheckForWinnerLoser();
+        selectedCity = e.value;
+       CheckForWinnerLoser();
   };
   //for the dropdown select https://blog.logrocket.com/getting-started-with-react-select/
   const selectCustomStyles = {
@@ -154,15 +137,7 @@ const CityGame = () => {
           </button>
         </div>
         <div className='col-sm'>
-          {/* We need to show and hide the text below */}
-
-          {/* <div className='headingoutome'>
-            {toggleTextIsHidden === "false"
-              ? "You have chosen " + selectedCity
-              : "The place is called  " + gameData.Meaning}
-          </div> */}
-
-          <Select
+            <Select
             styles={selectCustomStyles}
             options={selectCityData}
             className='selectDropDownStyle'
@@ -172,15 +147,7 @@ const CityGame = () => {
             controlShouldRenderValue={true}
           />
         </div>
-        {/* <div className='col-sm'>
-          <button
-            className='buttonSubmit btn btn-default'
-            onClick={onClickSubmit}
-          >
-            Submit your answer
-          </button>
-        </div> */}
-
+        
         <Results citiesCorrect={citiesCorrect} citiesWrong={citiesWrong} />
       </div>
 

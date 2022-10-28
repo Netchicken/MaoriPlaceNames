@@ -11,12 +11,12 @@ const Footer = ({ props }) => {
           <div className='appheadercitytext'>
             <a
               href={
-                "https://www.google.com/search?q=new+zealand+map+" +
-                props.Placename
+                "https://www.google.com/search?q=" +
+                props.A
               }
               target='_blank'
             >
-              Google {props.Placename ? props.Placename : "No place"}{" "}
+              Google {props.A ? props.A : "No place"}{" "}
               (debugging)
             </a>
           </div>
